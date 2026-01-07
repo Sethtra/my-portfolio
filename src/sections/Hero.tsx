@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -9,9 +10,12 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
     >
-      {/* Background Gradient Blob */}
-      <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse" />
-      <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] -z-10" />
+      {/* Background Gradient Blob - Optimized */}
+      <div
+        className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[60px] -z-10"
+        style={{ willChange: "opacity" }}
+      />
+      <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[60px] -z-10" />
 
       <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
@@ -77,27 +81,14 @@ export default function Hero() {
 
             {/* Image container */}
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl bg-gradient-to-br from-primary/10 to-purple-500/10">
-              {/* Placeholder - Replace with your actual image */}
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                <div className="text-center">
-                  <div className="text-6xl mb-2">👤</div>
-                  <p className="text-sm">Your Photo Here</p>
-                  <p className="text-xs mt-2 px-4">
-                    Place your image in
-                    <br />
-                    `/public/profile.jpg`
-                  </p>
-                </div>
-              </div>
-              {/* Uncomment when you add your image:
               <Image
                 src="/profile.jpg"
-                alt="Profile"
+                alt="Profile Picture"
                 fill
+                sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
                 className="object-cover"
                 priority
               />
-              */}
             </div>
           </div>
         </motion.div>
