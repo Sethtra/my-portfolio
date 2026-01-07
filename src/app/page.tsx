@@ -6,6 +6,7 @@ import Skills from "@/sections/Skills";
 import Projects from "@/sections/Projects";
 import Contact from "@/sections/Contact";
 import Background from "@/components/Background";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Projects />
       <Contact />
       <Footer />
+      <ThemeToggle />
     </main>
   );
 }

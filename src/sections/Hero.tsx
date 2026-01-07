@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { FaFacebook, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -47,10 +48,67 @@ export default function Hero() {
             Firebase. Ready to turn ideas into clean, functional code.
           </motion.p>
 
+          {/* Social Media Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex items-center justify-center md:justify-start gap-4"
+          >
+            <a
+              href="https://facebook.com/YOUR_FACEBOOK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-card border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110"
+              aria-label="Facebook"
+            >
+              <FaFacebook
+                size={20}
+                className="text-foreground hover:text-primary transition-colors"
+              />
+            </a>
+            <a
+              href="https://github.com/YOUR_GITHUB"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-card border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110"
+              aria-label="GitHub"
+            >
+              <FaGithub
+                size={20}
+                className="text-foreground hover:text-primary transition-colors"
+              />
+            </a>
+            <a
+              href="https://twitter.com/YOUR_TWITTER"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-card border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110"
+              aria-label="Twitter"
+            >
+              <FaTwitter
+                size={20}
+                className="text-foreground hover:text-primary transition-colors"
+              />
+            </a>
+            <a
+              href="https://linkedin.com/in/YOUR_LINKEDIN"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-card border border-border hover:bg-primary/10 transition-all hover:scale-110"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin
+                size={20}
+                className="text-foreground hover:text-primary transition-colors"
+              />
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4"
           >
             <Link

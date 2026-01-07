@@ -3,25 +3,57 @@
 
 @layer base {
   :root {
-    --background: 10 10 10; /* #0a0a0a */
-    --foreground: 250 250 250; /* #fafafa */
+    /* Dark Developer Theme - Terminal Inspired */
+    --background: 13 17 23; /* #0d1117 - GitHub dark */
+    --foreground: 201 209 217; /* #c9d1d9 - light text */
 
-    --card: 20 20 20;
-    --card-foreground: 250 250 250;
+    --card: 22 27 34;
+    --card-foreground: 201 209 217;
 
-    --primary: 59 130 246; /* blue-500 */
+    --primary: 88 166 255; /* #58a6ff - bright blue (terminal) */
+    --primary-foreground: 13 17 23;
+
+    --secondary: 33 38 45;
+    --secondary-foreground: 201 209 217;
+
+    --muted: 33 38 45;
+    --muted-foreground: 139 148 158;
+
+    --accent: 56 139 253; /* tech blue accent */
+    --accent-foreground: 13 17 23;
+
+    --border: 48 54 61;
+
+    --success: 87 171 90; /* terminal green */
+    --warning: 255 212 59; /* terminal yellow */
+    --error: 248 81 73; /* terminal red */
+  }
+
+  .light {
+    /* Light Developer Theme - Clean & Modern */
+    --background: 255 255 255; /* pure white */
+    --foreground: 31 35 40; /* dark text */
+
+    --card: 246 248 250;
+    --card-foreground: 31 35 40;
+
+    --primary: 9 105 218; /* GitHub blue */
     --primary-foreground: 255 255 255;
 
-    --secondary: 30 41 59;
-    --secondary-foreground: 250 250 250;
+    --secondary: 246 248 250;
+    --secondary-foreground: 31 35 40;
 
-    --muted: 38 38 38;
-    --muted-foreground: 163 163 163;
+    --muted: 246 248 250;
+    --muted-foreground: 87 96 106;
 
-    --accent: 38 38 38;
-    --accent-foreground: 250 250 250;
+    --accent: 9 105 218;
+    --accent-foreground: 255 255 255;
 
-    --border: 38 38 38;
+    --border: 208 215 222;
+
+    --success: 31 136 61;
+    --warning: 251 192 45;
+    --error: 207 34 46;
   }
 }
 
