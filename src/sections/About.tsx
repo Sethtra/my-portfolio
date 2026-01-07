@@ -72,7 +72,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all hover:scale-105"
               >
-                <FaDownload /> Download CV
+                <FaDownload /> Download Resume
               </a>
               <a
                 href="https://drive.google.com/file/d/1cX3TNoNygSITnUYjIdbGzqnQdLBvbIRv/preview"
@@ -80,7 +80,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-card hover:bg-muted transition-all hover:scale-105"
               >
-                <FaFileAlt /> Preview CV
+                <FaFileAlt /> Preview Resume
               </a>
             </div>
           </motion.div>

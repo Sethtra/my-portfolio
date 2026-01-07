@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import { FaMeteor } from "react-icons/fa";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -21,11 +22,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link
-            href="#home"
-            className="text-xl font-bold font-mono tracking-tighter hover:text-primary transition-colors"
-          >
-            PORTFOLIO
+          <Link href="#home" className="flex items-center gap-2 group">
+            <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+              <FaMeteor className="text-primary text-base group-hover:scale-110 transition-transform" />
+            </div>
+            <span className="text-xl font-bold font-mono tracking-tighter text-primary group-hover:text-purple-500 transition-colors">
+              PORTFOLIO
+            </span>
           </Link>
 
           {/* Desktop Menu */}

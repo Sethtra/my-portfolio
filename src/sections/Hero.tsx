@@ -3,13 +3,20 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebook, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaTwitter,
+  FaLinkedin,
+  FaMeteor,
+} from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 pt-32 md:pt-20 relative overflow-hidden"
     >
       {/* Background Gradient Blob - Optimized */}
       <div
@@ -26,9 +33,32 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="text-primary font-medium tracking-wider uppercase text-sm">
-              Portfolio
-            </span>
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
+              <span className="relative inline-flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+              </span>
+
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-pink-500 font-bold font-mono tracking-[0.3em] uppercase text-sm md:text-base">
+                PORTFOLIO
+              </span>
+
+              <motion.div
+                animate={{
+                  x: [-2, 2, -2],
+                  y: [-2, 2, -2],
+                  rotate: [0, 10, -10, 0],
+                  filter: ["brightness(1)", "brightness(1.5)", "brightness(1)"],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <FaMeteor className="text-yellow-400 text-xl drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]" />
+              </motion.div>
+            </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mt-4 tracking-tight leading-tight">
               Building digital <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">
@@ -133,20 +163,29 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-            {/* Glowing ring effect */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-purple-500 blur-2xl opacity-30 animate-pulse" />
+          <div className="flex flex-col items-center">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              {/* Glowing ring effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-purple-500 blur-2xl opacity-30 animate-pulse" />
 
-            {/* Image container */}
-            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl bg-gradient-to-br from-primary/10 to-purple-500/10">
-              <Image
-                src="/profile.jpg"
-                alt="Profile Picture"
-                fill
-                sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
-                className="object-cover"
-                priority
-              />
+              {/* Image container */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl bg-gradient-to-br from-primary/10 to-purple-500/10">
+                <Image
+                  src="/profile.jpg"
+                  alt="Profile Picture"
+                  fill
+                  sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Name under profile - Now flows correctly */}
+            <div className="mt-8 text-center">
+              <h2 className="text-2xl font-bold tracking-widest text-foreground/80 font-mono">
+                BO SETHTRA
+              </h2>
             </div>
           </div>
         </motion.div>
