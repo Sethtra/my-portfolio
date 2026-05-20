@@ -9,6 +9,7 @@ export default function Background() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -123,7 +124,7 @@ export default function Background() {
           }}
           animate={{
             y: [0, -30, 0],
-            x: [0, Math.random() * 20 - 10, 0],
+            x: [0, ((i * 7) % 20) - 10, 0],
             opacity: [0.5, 1, 0.5],
             scale: [1, 1.2, 1],
           }}

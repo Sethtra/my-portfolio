@@ -6,11 +6,9 @@ import Image from "next/image";
 import {
   FaFacebook,
   FaGithub,
-  FaTwitter,
   FaLinkedin,
   FaMeteor,
 } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
 
 export default function Hero() {
   return (
@@ -86,7 +84,7 @@ export default function Hero() {
             className="flex items-center justify-center md:justify-start gap-4"
           >
             <a
-              href="https://facebook.com/YOUR_FACEBOOK"
+              href="https://www.facebook.com/lu.fii.35"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110"
@@ -98,7 +96,7 @@ export default function Hero() {
               />
             </a>
             <a
-              href="https://github.com/YOUR_GITHUB"
+              href="https://github.com/Sethtra"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110"
@@ -110,19 +108,7 @@ export default function Hero() {
               />
             </a>
             <a
-              href="https://twitter.com/YOUR_TWITTER"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-card border border-border hover:border-primary hover:bg-primary/10 transition-all hover:scale-110"
-              aria-label="Twitter"
-            >
-              <FaTwitter
-                size={20}
-                className="text-foreground hover:text-primary transition-colors"
-              />
-            </a>
-            <a
-              href="https://linkedin.com/in/YOUR_LINKEDIN"
+              href="https://www.linkedin.com/in/bo-sethtra-27bb05305/?isSelfProfile=true"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card border border-border hover:bg-primary/10 transition-all hover:scale-110"

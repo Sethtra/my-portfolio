@@ -3,7 +3,6 @@
 import Section from "@/components/Section";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { FaDownload, FaFileAlt } from "react-icons/fa";
 
 export default function About() {
@@ -43,7 +42,7 @@ export default function About() {
           >
             <div className="text-muted-foreground text-lg space-y-6 leading-relaxed">
               <p>
-                Hello! I'm a passionate developer who recently graduated with a
+                Hello! I&apos;m a passionate developer who recently graduated with a
                 focus on modern web technologies. I love creating intuitive and
                 dynamic user experiences using the latest tools.
               </p>

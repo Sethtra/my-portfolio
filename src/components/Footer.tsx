@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -12,22 +12,31 @@ export default function Footer() {
 
         <div className="flex space-x-6">
           <a
-            href="#"
+            href="https://www.facebook.com/lu.fii.35"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors text-xl"
+            aria-label="Facebook"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://github.com/Sethtra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors text-xl"
+            aria-label="GitHub"
           >
             <FaGithub />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/bo-sethtra-27bb05305/?isSelfProfile=true"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors text-xl"
+            aria-label="LinkedIn"
           >
             <FaLinkedin />
-          </a>
-          <a
-            href="#"
-            className="text-muted-foreground hover:text-primary transition-colors text-xl"
-          >
-            <FaTwitter />
           </a>
         </div>
       </div>

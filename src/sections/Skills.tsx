@@ -2,14 +2,13 @@
 
 import Section from "@/components/Section";
 import { motion } from "framer-motion";
-import { FaReact, FaLaravel, FaPhp, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaLaravel, FaPhp } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTailwindcss,
   SiTypescript,
   SiFirebase,
   SiMysql,
-  SiGit,
 } from "react-icons/si";
 
 const skills = [
