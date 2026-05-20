@@ -66,7 +66,7 @@ export default function About() {
             {/* CV Download Button */}
             <div className="flex gap-4 pt-4">
               <a
-                href="https://drive.google.com/uc?export=download&id=1cX3TNoNygSITnUYjIdbGzqnQdLBvbIRv"
+                href="https://drive.google.com/uc?export=download&id=1J3vzh-tskzoAt62YR1vriWOg_Vcok0MT"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all hover:scale-105"
@@ -74,7 +74,7 @@ export default function About() {
                 <FaDownload /> Download Resume
               </a>
               <a
-                href="https://drive.google.com/file/d/1cX3TNoNygSITnUYjIdbGzqnQdLBvbIRv/preview"
+                href="https://drive.google.com/file/d/1J3vzh-tskzoAt62YR1vriWOg_Vcok0MT/preview"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-card hover:bg-muted transition-all hover:scale-105"
@@ -115,9 +115,9 @@ export default function About() {
                           Image {currentImageIndex + 1} of 4
                         </p>
                         <p className="text-xs">
-                          Place your images in /public:
+                         Place image in /public:
                           <br />
-                          about1.jpg, about2.jpg, about3.jpg, about4.jpg
+                          and name them like this: about1.jpg, about2.jpg, about3.jpg, about4.jpg
                         </p>
                       </div>
                     </div>
