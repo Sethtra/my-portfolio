@@ -20,7 +20,7 @@ const projects = [
     description:
       "A real-time messaging application using Next.js and Firebase. Supports private messaging, image sharing, and online status indicators.",
     tags: ["Next.js", "Firebase", "TypeScript"],
-    image: "/chat_app_preview.png",
+    image: "",
     status: "Future Idea (In Development)",
     links: { demo: "#", github: "#" },
   },
@@ -29,7 +29,7 @@ const projects = [
     description:
       "A productivity tool for teams to manage tasks and projects. Built with React and Node.js with drag-and-drop functionality.",
     tags: ["React", "Node.js", "MongoDB"],
-    image: "/task_app_preview.png",
+    image: "",
     status: "Future Idea (In Development)",
     links: { demo: "#", github: "#" },
   },
@@ -58,14 +58,18 @@ export default function Projects() {
             className="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group flex flex-col h-full"
           >
             {/* Project Image */}
-            <div className="relative h-48 overflow-hidden bg-muted">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+            <div className="relative h-48 overflow-hidden bg-muted/20">
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <div className="w-full h-full bg-secondary/10" />
+              )}
               {project.status !== "Production" && (
                 <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-md backdrop-blur-sm">
                   {project.status}
