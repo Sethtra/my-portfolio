@@ -72,8 +72,8 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-lg md:text-xl max-w-2xl"
           >
-            Fresh graduate specializing in React, Next.js, Laravel, and
-            Firebase. Ready to turn ideas into clean, functional code.
+            Fresh graduate specializing in React, Next.js, TypeScript, Laravel, and cloud ecosystems including AWS and Firebase.
+            Ready to turn ideas into clean, functional code. Passionate about building scalable, real-world applications with modern tools and technologies.
           </motion.p>
 
           {/* Social Media Links */}

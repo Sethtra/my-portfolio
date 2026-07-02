@@ -10,7 +10,7 @@ const projects = [
     title: "T-Store E-Commerce",
     description:
       "A premium e-commerce platform built with a Laravel backend API and Next.js/React frontend. Features include site branding management, dynamic shopping flows, and clean administration controls.",
-    tags: ["React", "Laravel", "MySQL", "Tailwind"],
+    tags: ["React", "Laravel", "Supabase", "Tailwind", "Typescript"],
     image: "/t_store_preview.png",
     status: "Production",
     links: { demo: "https://www.t-store.site/", github: "https://github.com/Sethtra/T-Store.git" },

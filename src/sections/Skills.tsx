@@ -2,13 +2,15 @@
 
 import Section from "@/components/Section";
 import { motion } from "framer-motion";
-import { FaReact, FaLaravel, FaPhp } from "react-icons/fa";
+import { FaReact, FaLaravel, FaPhp, FaAws } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTailwindcss,
   SiTypescript,
   SiFirebase,
   SiMysql,
+  SiSupabase,
+  SiJavascript,
 } from "react-icons/si";
 
 const skills = [
@@ -18,8 +20,11 @@ const skills = [
   { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38B2AC" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
   { name: "PHP", icon: FaPhp, color: "#777BB4" },
   { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+  { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
+  { name: "AWS", icon: FaAws, color: "#FF9900" },
 ];
 
 export default function Skills() {
