@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FaDownload, FaFileAlt } from "react-icons/fa";
+import Image from "next/image";
 
 export default function About() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -107,21 +108,6 @@ export default function About() {
                     transition={{ duration: 0.5 }}
                     className="relative w-full h-full"
                   >
-                    {/* Placeholder - Replace when you add images */}
-                    <div className="w-full h-full bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center">
-                      <div className="text-center text-muted-foreground p-8">
-                        <div className="text-6xl mb-4">📸</div>
-                        <p className="text-sm mb-2">
-                          Image {currentImageIndex + 1} of 4
-                        </p>
-                        <p className="text-xs">
-                         Place image in /public:
-                          <br />
-                          and name them like this: about1.jpg, about2.jpg, about3.jpg, about4.jpg
-                        </p>
-                      </div>
-                    </div>
-                    {/* Uncomment when you add your images:
                     <Image
                       src={images[currentImageIndex]}
                       alt={`About image ${currentImageIndex + 1}`}
@@ -129,7 +115,6 @@ export default function About() {
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 500px"
                     />
-                    */}
                   </motion.div>
                 </AnimatePresence>
               </div>
