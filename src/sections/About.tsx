@@ -8,6 +8,7 @@ import Image from "next/image";
 
 export default function About() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Array of image paths - you can add your 4 images in /public folder
   const images = ["/about1.jpg", "/about2.jpg", "/about3.jpg", "/about4.jpg"];
@@ -93,7 +94,7 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
+            <div className="relative w-full aspect-video max-w-lg mx-auto">
               {/* Glowing effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-2xl blur-2xl" />
 
@@ -106,13 +107,14 @@ export default function About() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.5 }}
-                    className="relative w-full h-full"
+                    className="relative w-full h-full cursor-zoom-in"
+                    onClick={() => setSelectedImage(images[currentImageIndex])}
                   >
                     <Image
                       src={images[currentImageIndex]}
                       alt={`About image ${currentImageIndex + 1}`}
                       fill
-                      className="object-cover"
+                      className="object-cover hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 500px"
                     />
                   </motion.div>
@@ -138,6 +140,36 @@ export default function About() {
           </motion.div>
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-4 md:p-8 cursor-zoom-out"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full h-full max-w-7xl max-h-[90vh]"
+            >
+              <Image
+                src={selectedImage}
+                alt="Full screen image"
+                fill
+                className="object-contain drop-shadow-2xl"
+                sizes="100vw"
+                quality={100}
+                priority
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Section>
   );
 }
