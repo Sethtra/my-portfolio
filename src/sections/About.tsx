@@ -68,7 +68,7 @@ export default function About() {
             {/* CV Download Button */}
             <div className="flex gap-4 pt-4">
               <a
-                href="https://drive.google.com/uc?export=download&id=1J3vzh-tskzoAt62YR1vriWOg_Vcok0MT"
+                href="https://drive.google.com/uc?export=download&id=1yR5M-ig6W3kM21E2wEdutI8oLnnyRi5U"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all hover:scale-105"
@@ -76,7 +76,7 @@ export default function About() {
                 <FaDownload /> Download Resume
               </a>
               <a
-                href="https://drive.google.com/file/d/1J3vzh-tskzoAt62YR1vriWOg_Vcok0MT/preview"
+                href="https://drive.google.com/file/d/1yR5M-ig6W3kM21E2wEdutI8oLnnyRi5U/preview"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-card hover:bg-muted transition-all hover:scale-105"
